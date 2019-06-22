@@ -10,87 +10,127 @@ CORS(app)
 
 port = int(os.getenv('PORT', '3000'))
 
-@app.route('/', methods = ['GET'])
+class Parameter():
+    steps = 0
+    epoch = 0
+    pos = 0
+
+
+@app.route('/', methods=['GET'])
 def start():
     return 'Hello'
 
-@app.route('/getNumberAndAction', methods = ['POST'])
+
+@app.route('/getZeros', methods=['GET'])
+def qZeros():
+    env = Env()
+    qtable = np.zeros([env.stateCount, env.actionCount]).tolist()
+    saveQtable(qtable)
+    print(Parameter.steps)
+    return jsonify({"res": "success"})
+
+
+@app.route('/train', methods=['GET'])
+def train():
+    qtable = loadQtable()
+
+    return jsonify({"res": "success"})
+
+
+
+def loadQtable():
+    x = []
+    y = []
+    with open('qtable.txt', 'r') as f:
+        for line in f:
+            if line:  # avoid blank lines
+                x.append(float(line.strip()))
+                if len(x) == 4:
+                    y.append(x)
+                    x = []
+    return y
+
+def saveQtable(data):
+    np.savetxt('qtable.txt', data, delimiter='\n')
 
 class Env():
     def __init__(self):
-        self.pos = 0;
         self.end = 10;
-        self.actions = [0, 1, 2];
+        self.actions = [0, 1, 2, 3];
         self.stateCount = 10;
-        self.actionCount = 3;
+        self.actionCount = 4;
 
     def reset(self):
-        self.pos = 0;
+        Parameter.pos = 0;
         self.done = False;
         return 0, 0, False;
 
-    def step(self, action):
+    def getNumbersForExample(self):
 
-        a = random.randint(0, 10);
-        b = random.randint(0, 10);
+        a = random.randint(1, 10);
+        b = random.randint(1, 10);
 
         if b > a:
             pom = b
             b = a
             a = pom
 
+        return a, b
+
+    def step(self, action, a, b):
+
         if action == 0:
             print(action)
             c = a + b;
-            #odpoved = input("Zadaj spravnu odpoved: " + str(a) + " + " + str(b) + " = ");
+            # odpoved = input("Zadaj spravnu odpoved: " + str(a) + " + " + str(b) + " = ");
 
             odpoved = str(c)
             print(str(a) + " + " + str(b) + " = " + str(odpoved));
 
             if str(c) == odpoved:
                 reward = -0.5;
-                self.pos += 1;
+                Parameter.pos += 1;
             else:
                 reward = 1;
-                self.pos += 1;
+                Parameter.pos += 1;
 
 
         elif action == 1:
             print(action)
             if a >= b:
                 c = a - b;
-                #odpoved = input("Zadaj spravnu odpoved: " + str(a) + " - " + str(b) + " = ");
+                # odpoved = input("Zadaj spravnu odpoved: " + str(a) + " - " + str(b) + " = ");
                 odpoved = str(c)
                 print(str(a) + " - " + str(b) + " = " + str(odpoved));
 
 
             else:
                 c = b - a;
-                #odpoved = input("Zadaj spravnu odpoved: " + str(b) + " - " + str(a) + " = ");
+                # odpoved = input("Zadaj spravnu odpoved: " + str(b) + " - " + str(a) + " = ");
                 odpoved = str(c)
                 print(str(b) + " - " + str(a) + " = " + str(odpoved));
 
             if str(c) == odpoved:
                 reward = -0.5;
-                self.pos += 1;
+                Parameter.pos += 1;
             else:
                 reward = 1;
-                self.pos += 1;
+                Parameter.pos += 1;
 
         elif action == 2:
             print(action)
             c = a * b;
-            #odpoved = input("Zadaj spravnu odpoved: " + str(a) + " * " + str(b) + " = ");
+            # odpoved = input("Zadaj spravnu odpoved: " + str(a) + " * " + str(b) + " = ");
 
-            odpoved = str(c-100)
+            odpoved = str(c - 100)
             print(str(a) + " * " + str(b) + " = " + str(odpoved));
 
             if str(c) == odpoved:
                 reward = -0.5;
-                self.pos += 1;
+                Parameter.pos += 1;
             else:
                 reward = 1;
-                self.pos += 1;
+                Parameter.pos += 1;
 
         elif action == 3:
             print(action)
@@ -101,13 +141,13 @@ class Env():
 
             if str(c) == odpoved:
                 reward = -0.5;
-                self.pos += 1;
+                Parameter.pos += 1;
             else:
                 reward = 1;
-                self.pos += 1;
+                Parameter.pos += 1;
 
-        done = self.pos == 9;
-        nextState = self.pos;
+        done = Parameter.pos == 9;
+        nextState = Parameter.pos;
         return nextState, reward, done;
 
     def randomAction(self):
@@ -117,11 +157,10 @@ class Env():
 def qLearning():
     env = Env()
 
-    #qtable = np.random.rand(env.stateCount, env.actionCount).tolist()
+    # qtable = np.random.rand(env.stateCount, env.actionCount).tolist()
 
-    #TODO - create text file with zeros q table
+    # TODO - create text file with zeros q table
     qtable = np.zeros([env.stateCount, env.actionCount]).tolist()
-
 
     # hyperparameters
     epochs = 8
@@ -129,18 +168,20 @@ def qLearning():
     epsilon = 0.5
     decay = 0.1
 
+
     # training loop
-    for i in range(epochs):
+    if Parameter.epoch <= epochs:
         state, reward, done = env.reset()
-        steps = 0
+        Parameter.steps = 0
         print("\n")
-        while not done:
-            #print("epoch #", i + 1, "/", epochs)
+        if not done:
+            # print("epoch #", i + 1, "/", epochs)
 
             # count steps to finish game
-            steps += 1
+            Parameter.steps += 1
 
-            #TODO - load qtable from txt
+            # TODO - load qtable from txt
+            qtable = loadQtable()
 
             # act randomly sometimes to allow exploration
             if np.random.uniform() < epsilon:
@@ -149,21 +190,26 @@ def qLearning():
                 action = qtable[state].index(max(qtable[state]))
             # if not select max action in Qtable (act greedy)
 
-            next_state, reward, done = env.step(action)
-            #print(next_state,reward,done)
+            a,b = env.getNumbersForExample()
+
+
+
+            next_state, reward, done = env.step(action, a, b)
+            # print(next_state,reward,done)
 
             qtable[state][action] = reward + gamma * max(qtable[next_state])
+            saveQtable(qtable)
             print(qtable)
             # update state
             state = next_state
             # The more we learn, the less we take random actions
 
-            if steps == 10:
+            if Parameter.steps == 10:
                 done = True;
 
         epsilon -= decay * epsilon
 
 qLearning()
 
-if(__name__) == '_main_':
+if (__name__) == '_main_':
     app.run(host='0.0.0.0', port=port)
