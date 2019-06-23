@@ -78,8 +78,8 @@ def train():
 
             Parameter.epsilon -= decay * Parameter.epsilon
 
-            return jsonify({"action": int(action), "a": int(a), "b": int(b)})
-    return jsonify({"resp": "succes"})
+            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b)})
+    return jsonify({"res": "success"})
 
 
 @app.route('/evaluate', methods=['POST'])
