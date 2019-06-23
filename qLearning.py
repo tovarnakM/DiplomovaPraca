@@ -16,9 +16,9 @@ class Parameter():
     epoch = 0
     pos = 0
     state = 0
-    epsilon = 0.5
-    done = False
+    epsilon = 0.6
     newEpoch = 0
+    done = False
 
 
 @app.route('/', methods=['GET'])
@@ -33,11 +33,9 @@ def qZeros():
     Parameter.pos = 0
     Parameter.state = 0
     Parameter.epsilon = 0.5
-    Parameter.done = False
     env = Env()
     qtable = np.zeros([env.stateCount, env.actionCount]).tolist()
     saveQtable(qtable)
-    print(Parameter.steps)
     return jsonify({"res": "success"})
 
 
@@ -45,42 +43,43 @@ def qZeros():
 def train():
     env = Env()
     # hyperparameters
-    epochs = 8
+    epochs = 3
     decay = 0.1
-    action = 1
 
-    # training loop
-    if Parameter.epoch <= epochs and Parameter.epoch != Parameter.newEpoch:
-        Parameter.newEpoch = Parameter.epoch
-        Parameter.state, reward, Parameter.done = env.reset()
-        Parameter.steps = 0
-        print("\n")
-    if not Parameter.done:
-        # count steps to finish game
-        Parameter.steps += 1
+    if Parameter.epoch <= epochs:
+        if Parameter.epoch == 0 and Parameter.steps == 0:
+            Parameter.state, reward, Parameter.done = env.reset()
+            Parameter.steps = 0
 
-        qtable = loadQtable()
+        # training loop
+        if Parameter.epoch <= epochs and Parameter.epoch != Parameter.newEpoch:
+            Parameter.newEpoch = Parameter.epoch
+            Parameter.state, reward, Parameter.done = env.reset()
+            Parameter.steps = 0
+            print("\n")
 
-        # act randomly sometimes to allow exploration
-        if np.random.uniform() < Parameter.epsilon:
-            action = env.randomAction()
-        else:
-            action = qtable[Parameter.state].index(max(qtable[Parameter.state]))
-        # if not select max action in Qtable (act greedy)
+        if not Parameter.done:
+            # count steps to finish game
+            Parameter.steps += 1
 
-        a, b = env.getNumbersForExample()
-        if action == 3:
-            c = a * b
-            a = c
+            qtable = loadQtable()
 
-        print(action)
-        print(Parameter.state)
-        print("epoch: " + str(Parameter.epoch))
-        print("steps: " + str(Parameter.steps))
+            # act randomly sometimes to allow exploration
+            if np.random.uniform() < Parameter.epsilon:
+                action = env.randomAction()
+            else:
+                action = qtable[Parameter.state].index(max(qtable[Parameter.state]))
+            # if not select max action in Qtable (act greedy)
 
-    Parameter.epsilon -= decay * Parameter.epsilon
+            a, b = env.getNumbersForExample()
+            if action == 3:
+                c = a * b
+                a = c
 
-    return jsonify({"action": int(action), "a": int(a), "b": int(b)})
+            Parameter.epsilon -= decay * Parameter.epsilon
+
+            return jsonify({"action": int(action), "a": int(a), "b": int(b)})
+    return jsonify({"resp": "succes"})
 
 
 @app.route('/evaluate', methods=['POST'])
@@ -90,27 +89,30 @@ def evaluate():
 
     req_data = request.get_json()
 
-    next_state, reward, Parameter.done = env.step(req_data['action'], req_data['a'], req_data['b'], req_data['userResponse'])
+    next_state, reward, Parameter.done, c = env.step(req_data['action'], req_data['a'], req_data['b'],
+                                                  req_data['userResponse'])
     # print(next_state,reward,done)
 
-    qtable = loadQtable()
-    qtable[Parameter.state][req_data['action']] = reward + gamma * max(qtable[next_state])
 
     print(Parameter.state)
     print(req_data['action'])
     print(next_state)
-    print("epoch: " + str(Parameter.epoch))
-    print("steps: " + str(Parameter.steps))
+
+    qtable = loadQtable()
+    qtable[Parameter.state][req_data['action']] = reward + gamma * max(qtable[Parameter.state])
+    saveQtable(qtable)
 
     # update state
     Parameter.state = next_state
     # The more we learn, the less we take random actions
 
-    if Parameter.steps == 10:
+    if Parameter.steps == 4:
         Parameter.epoch += 1
         Parameter.done = True;
 
-    return jsonify({"response": "success"})
+    if c == req_data['userResponse']:
+        return jsonify({"res": "success"})
+    return jsonify({"res": "fail"})
 
 def loadQtable():
     x = []
@@ -131,7 +133,7 @@ def saveQtable(data):
 
 class Env():
     def __init__(self):
-        self.end = 3;
+        self.end = 4;
         self.actions = [0, 1, 2, 3];
         self.stateCount = 4;
         self.actionCount = 4;
@@ -164,7 +166,6 @@ class Env():
             else:
                 reward = 1;
                 Parameter.pos += 1;
-
 
         elif action == 1:
 
@@ -199,13 +200,12 @@ class Env():
                 reward = 1;
                 Parameter.pos += 1;
 
-        Parameter.done = Parameter.pos == 3;
+        Parameter.done = Parameter.pos == 4;
         nextState = Parameter.pos;
-        return nextState, reward, Parameter.done;
+        return nextState, reward, Parameter.done, c;
 
     def randomAction(self):
         return np.random.choice(self.actions);
-
 
 if (__name__) == '_main_':
     app.run(host='0.0.0.0', port=port)
