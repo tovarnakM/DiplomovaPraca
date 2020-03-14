@@ -1,15 +1,18 @@
 from flask import Flask, jsonify, request
-from flask_cors import CORS
+#from flask_cors import CORS
+from pymongo import MongoClient
 
 import random
 import numpy as np
 import os
 
+client = MongoClient('mongodb://localhost:27017')
+db = client.students
+
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
 
 port = int(os.getenv('PORT', '3000'))
-
 
 class Parameter():
     steps = 0
@@ -33,10 +36,11 @@ def qZeros():
     Parameter.pos = 0
     Parameter.state = 0
     Parameter.epsilon = 0.5
-    env = Env()
-    qtable = np.zeros([env.stateCount, env.actionCount]).tolist()
-    saveQtable(qtable)
-    return jsonify({"res": "success"})
+
+    email = request.args.get('email')
+    response = initializeTable(email)
+
+    return jsonify({"res": response})
 
 
 @app.route('/train', methods=['GET'])
@@ -62,7 +66,11 @@ def train():
             # count steps to finish game
             Parameter.steps += 1
 
-            qtable = loadQtable()
+            email = request.args.get('email')
+            qtable = loadQtable(email)
+
+            if qtable is None:
+                return "User Not found"
 
             # act randomly sometimes to allow exploration
             if np.random.uniform() < Parameter.epsilon:
@@ -91,16 +99,17 @@ def evaluate():
 
     next_state, reward, Parameter.done, c = env.step(req_data['action'], req_data['a'], req_data['b'],
                                                   req_data['userResponse'])
-    # print(next_state,reward,done)
+    email = req_data['email']
+    qtable = loadQtable(email)
 
-
-    print(Parameter.state)
-    print(req_data['action'])
-    print(next_state)
-
-    qtable = loadQtable()
     qtable[Parameter.state][req_data['action']] = reward + gamma * max(qtable[Parameter.state])
-    saveQtable(qtable)
+
+    db.students.find_one_and_update(
+        {"email": email},
+        {"$set":
+             {'qTable': qtable}
+         }, upsert=True
+    )
 
     # update state
     Parameter.state = next_state
@@ -114,21 +123,31 @@ def evaluate():
         return jsonify({"res": "success"})
     return jsonify({"res": "fail"})
 
-def loadQtable():
-    x = []
-    y = []
-    with open('qtable.txt', 'r') as f:
-        for line in f:
-            if line:  # avoid blank lines
-                x.append(float(line.strip()))
-                if len(x) == 4:
-                    y.append(x)
-                    x = []
-    return y
+def loadQtable(email):
+    user = db.students.find_one({'email': email})
+    if user is None:
+        return None
+    return user.get('qTable')
 
 
-def saveQtable(data):
-    np.savetxt('qtable.txt', data, delimiter='\n')
+def initializeTable(email):
+    user = db.students.find_one({'email': email})
+    if user is None:
+        env = Env()
+        students = {
+            'email': email,
+            'qTable': np.zeros([env.stateCount, env.actionCount]).tolist()
+        }
+        db.students.insert_one(students)
+        return "New user added!"
+    else:
+        db.students.find_one_and_update(
+            {"email": email},
+            {"$set":
+                 {'qTable': loadQtable(email)}
+             }, upsert=True
+        )
+        return "Learning with existing user!"
 
 
 class Env():
@@ -207,5 +226,5 @@ class Env():
     def randomAction(self):
         return np.random.choice(self.actions);
 
-if (__name__) == '_main_':
+if (__name__) == '__main__':
     app.run(host='0.0.0.0', port=port)
