@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+#from flask import Flask, jsonify, request
 # from flask_cors import CORS
 # from pymongo import MongoClient
 #
@@ -9,7 +9,7 @@ from flask import Flask, jsonify, request
 # client = MongoClient('mongodb://localhost:27017')
 # db = client.students
 #
-app = Flask(__name__)
+#app = Flask(__name__)
 # CORS(app)
 #
 # port = int(os.getenv('PORT', '5000'))
@@ -25,9 +25,9 @@ app = Flask(__name__)
 #     done = False
 
 
-@app.route('/', methods=['GET'])
-def start():
-    return '<h1>Hello world<h1>'
+# @app.route('/', methods=['GET'])
+# def start():
+#     return '<h1>Hello world<h1>'
 
 
 # @app.route('/getZeros', methods=['GET'])
@@ -229,5 +229,17 @@ def start():
 #         return np.random.choice(self.actions);
 #
 #
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
+
+import os
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello from Python!"
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
