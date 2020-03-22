@@ -36,9 +36,9 @@ def qZeros():
     Parameter.epsilon = 0.7
 
     email = request.args.get('email')
-    response = initializeTable(email)
-    print(email)
-    return jsonify({"res": response})
+    #response = initializeTable(email)
+    #return jsonify({"res": response})
+    return email
 
 
 @app.route('/train', methods=['GET'])
