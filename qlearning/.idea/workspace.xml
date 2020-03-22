@@ -50,14 +50,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Procfile" value="9" />
-          <entry key="py" value="370" />
+          <entry key="py" value="520" />
           <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="370" />
+          <entry key="Python" value="520" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,14 +78,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qlearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+            <state relative-caret-position="264">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#315#416#0" />
                 <element signature="e#850#2338#0" />
                 <element signature="e#2403#3267#0" />
-                <element signature="e#3448#3975#0" />
                 <element signature="e#3995#5682#0" />
               </folding>
             </state>
@@ -262,14 +261,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qlearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="264">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#315#416#0" />
             <element signature="e#850#2338#0" />
             <element signature="e#2403#3267#0" />
-            <element signature="e#3448#3975#0" />
             <element signature="e#3995#5682#0" />
           </folding>
         </state>

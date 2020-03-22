@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient('mongodb://localhost:27017')
+client = MongoClient('mongodb://username:user123@ds011231.mlab.com:11231/heroku_kkr81g5x')
 db = client.students
 
 class Parameter():
@@ -36,9 +36,8 @@ def qZeros():
     Parameter.epsilon = 0.7
 
     email = request.args.get('email')
-    #response = initializeTable(email)
-    #return jsonify({"res": response})
-    return email
+    response = initializeTable(email)
+    return jsonify({"res": response})
 
 
 @app.route('/train', methods=['GET'])
