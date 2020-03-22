@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient('mongodb://username:user123@ds011231.mlab.com:11231/heroku_kkr81g5x')
+client = MongoClient('mongodb://username:user123@ds011231.mlab.com:11231/heroku_kkr81g5x?retryWrites=false')
 db = client.heroku_kkr81g5x
 
 class Parameter():
