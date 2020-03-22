@@ -1,18 +1,16 @@
 from flask import Flask, jsonify, request
-#from flask_cors import CORS
-#from pymongo import MongoClient
+from flask_cors import CORS
+from pymongo import MongoClient
 
-#import random
-#import numpy as np
+import random
+import numpy as np
 import os
 
-#client = MongoClient('mongodb://localhost:27017')
-#db = client.students
+client = MongoClient('mongodb://localhost:27017')
+db = client.students
 
 app = Flask(__name__)
-#CORS(app)
-
-#port = int(os.getenv('PORT', '5000'))
+CORS(app)
 
 class Parameter():
     steps = 0
