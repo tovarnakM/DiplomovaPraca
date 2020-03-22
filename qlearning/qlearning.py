@@ -1,20 +1,16 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-import pymongo
+from pymongo import MongoClient
 
 import random
 import numpy as np
 import os
 
-#client = MongoClient('mongodb://localhost:27017')
-#db = client.students
-
-#mongo_url = os.getenv('MONGOLAB_URI', 'mongodb://localhost:27017')
-#db_name = 'mongotest'
-#print(db_name)
 
 app = Flask(__name__)
 CORS(app)
+
+port = int(os.getenv('PORT', '5000'))
 
 class Parameter():
     steps = 0
@@ -28,7 +24,10 @@ class Parameter():
 
 @app.route('/', methods=['GET'])
 def start():
-    return 'Hello world'
+    client = MongoClient('mongodb://localhost:27017')
+    db = client.students
+    user = db.students.find_one({'email': "ferko"})
+    return user
 
 
 @app.route('/getZeros', methods=['GET'])
@@ -41,7 +40,7 @@ def qZeros():
 
     email = request.args.get('email')
     response = initializeTable(email)
-
+    print(email)
     return jsonify({"res": response})
 
 
@@ -234,3 +233,4 @@ class Env():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
