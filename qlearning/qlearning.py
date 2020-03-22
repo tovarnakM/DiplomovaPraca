@@ -6,8 +6,8 @@ import random
 import numpy as np
 import os
 
-client = MongoClient('mongodb://localhost:27017')
-db = client.students
+#client = MongoClient('mongodb://localhost:27017')
+#db = client.students
 
 app = Flask(__name__)
 CORS(app)
