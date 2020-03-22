@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-#from flask_cors import CORS
+from flask_cors import CORS
 from pymongo import MongoClient
 
 import random
@@ -10,16 +10,17 @@ client = MongoClient('mongodb://localhost:27017')
 db = client.students
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 
-port = int(os.getenv('PORT', '3000'))
+port = int(os.getenv('PORT', '5000'))
+
 
 class Parameter():
     steps = 0
     epoch = 0
     pos = 0
     state = 0
-    epsilon = 0.6
+    epsilon = 0.7
     newEpoch = 0
     done = False
 
@@ -35,7 +36,7 @@ def qZeros():
     Parameter.epoch = 0
     Parameter.pos = 0
     Parameter.state = 0
-    Parameter.epsilon = 0.5
+    Parameter.epsilon = 0.7
 
     email = request.args.get('email')
     response = initializeTable(email)
@@ -47,7 +48,7 @@ def qZeros():
 def train():
     env = Env()
     # hyperparameters
-    epochs = 3
+    epochs = 9
     decay = 0.1
 
     if Parameter.epoch <= epochs:
@@ -86,7 +87,7 @@ def train():
 
             Parameter.epsilon -= decay * Parameter.epsilon
 
-            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b)})
+            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": Parameter.epoch + 1, "step": Parameter.steps})
     return jsonify({"res": "success"})
 
 
@@ -98,7 +99,7 @@ def evaluate():
     req_data = request.get_json()
 
     next_state, reward, Parameter.done, c = env.step(req_data['action'], req_data['a'], req_data['b'],
-                                                  req_data['userResponse'])
+                                                     req_data['userResponse'])
     email = req_data['email']
     qtable = loadQtable(email)
 
@@ -115,13 +116,14 @@ def evaluate():
     Parameter.state = next_state
     # The more we learn, the less we take random actions
 
-    if Parameter.steps == 4:
+    if Parameter.steps == 7:
         Parameter.epoch += 1
         Parameter.done = True;
 
     if c == req_data['userResponse']:
         return jsonify({"res": "success"})
     return jsonify({"res": "fail"})
+
 
 def loadQtable(email):
     user = db.students.find_one({'email': email})
@@ -154,7 +156,7 @@ class Env():
     def __init__(self):
         self.end = 4;
         self.actions = [0, 1, 2, 3];
-        self.stateCount = 4;
+        self.stateCount = 7;
         self.actionCount = 4;
 
     def reset(self):
@@ -219,12 +221,13 @@ class Env():
                 reward = 1;
                 Parameter.pos += 1;
 
-        Parameter.done = Parameter.pos == 4;
+        Parameter.done = Parameter.pos == 7;
         nextState = Parameter.pos;
         return nextState, reward, Parameter.done, c;
 
     def randomAction(self):
         return np.random.choice(self.actions);
 
-if (__name__) == '__main__':
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
