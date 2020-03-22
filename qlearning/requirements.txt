@@ -8,7 +8,6 @@ cffi==1.11.5
 chardet==3.0.4
 Click==7.0
 colorama==0.4.1
-conda==4.6.7
 cryptography==2.5
 cycler==0.10.0
 decorator==4.3.2
@@ -30,15 +29,11 @@ ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.13.3
 Jinja2==2.10.1
-Keras==2.2.4
-Keras-Applications==1.0.7
-Keras-Preprocessing==1.0.9
 kiwisolver==1.0.1
 luxand==0.7
 Markdown==3.0.1
 MarkupSafe==1.1.1
 matplotlib==3.0.2
-menuinst==1.4.14
 mkl-fft==1.0.10
 mkl-random==1.0.2
 numpy==1.16.1
