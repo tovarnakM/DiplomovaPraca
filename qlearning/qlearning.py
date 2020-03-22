@@ -25,7 +25,7 @@ class Parameter():
 @app.route('/', methods=['GET'])
 def start():
     user = db.students.find_one({'email': "ferko"})
-    return user
+    return "hello it is working"
 
 
 @app.route('/getZeros', methods=['GET'])
