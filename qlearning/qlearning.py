@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from pymongo import MongoClient
+import pymongo
 
 import random
 import numpy as np
@@ -8,6 +8,10 @@ import os
 
 #client = MongoClient('mongodb://localhost:27017')
 #db = client.students
+
+mongo_url = os.getenv('MONGOLAB_URI', 'mongodb://localhost:27017')
+#db_name = 'mongotest'
+#print(db_name)
 
 app = Flask(__name__)
 CORS(app)
