@@ -6,11 +6,11 @@ import random
 import numpy as np
 import os
 
-
 app = Flask(__name__)
 CORS(app)
 
-port = int(os.getenv('PORT', '5000'))
+client = MongoClient('mongodb://localhost:27017')
+db = client.students
 
 class Parameter():
     steps = 0
@@ -24,8 +24,6 @@ class Parameter():
 
 @app.route('/', methods=['GET'])
 def start():
-    client = MongoClient('mongodb://localhost:27017')
-    db = client.students
     user = db.students.find_one({'email': "ferko"})
     return user
 
