@@ -8,6 +8,7 @@ cffi==1.11.5
 chardet==3.0.4
 Click==7.0
 colorama==0.4.1
+conda==4.6.7
 cryptography==2.5
 cycler==0.10.0
 decorator==4.3.2
@@ -37,6 +38,9 @@ luxand==0.7
 Markdown==3.0.1
 MarkupSafe==1.1.1
 matplotlib==3.0.2
+menuinst==1.4.14
+mkl-fft==1.0.10
+mkl-random==1.0.2
 numpy==1.16.1
 parso==0.3.4
 pickleshare==0.7.5
@@ -53,12 +57,14 @@ pyreadline==2.1
 PySocks==1.6.8
 pyspark==2.4.1
 python-dateutil==2.8.0
+pywin32==223
 PyYAML==3.13
 requests==2.21.0
 ruamel-yaml==0.15.46
 scipy==1.2.1
 six==1.12.0
 tensorboard==1.12.2
+tensorflow==1.12.0
 termcolor==1.1.0
 traitlets==4.3.2
 urllib3==1.24.1
