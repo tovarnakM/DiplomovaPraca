@@ -2,172 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0f57052-5f6b-488e-95d6-dc4c8feee942" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/qlearning/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/qlearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/qlearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/entry_points.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/entry_points.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Flask-1.1.1.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/entry_points.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/entry_points.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Jinja2-2.11.1.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/MarkupSafe-1.1.1.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/Werkzeug-1.0.0.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click-7.1.1.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_bashcomplete.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_bashcomplete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_termui_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_termui_impl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_textwrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_textwrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_unicodefun.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_unicodefun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_winconsole.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/_winconsole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/formatting.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/formatting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/termui.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/termui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/click/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/blueprints.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/blueprints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/ctx.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/ctx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/debughelpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/debughelpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/json/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/json/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/json/tag.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/json/tag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/templating.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/templating.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/flask/wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/LICENSE.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous-1.1.0.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/encoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/encoding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/exc.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/exc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/jws.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/jws.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/signer.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/signer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/timed.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/timed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/url_safe.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/itsdangerous/url_safe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/_identifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/_identifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/asyncfilters.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/asyncfilters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/asyncsupport.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/asyncsupport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/bccache.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/bccache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/compiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/ext.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/ext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/idtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/idtracking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/lexer.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/lexer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/loaders.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/loaders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/meta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/nativetypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/nativetypes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/nodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/nodes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/optimizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/runtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/sandbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/visitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/jinja2/visitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_native.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/markupsafe/_native.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/dependency_links.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/dependency_links.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/entry_points.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/entry_points.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/requires.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/EGG-INFO/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/certifi/cacert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/certifi/cacert.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_internal.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_internal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_reloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/_reloader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/datastructures.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/datastructures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/console.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/repr.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/repr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/FONT_LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/FONT_LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/debugger.js" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/debugger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/shared/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/tbtools.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/debug/tbtools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/filesystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/filesystem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/formparser.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/formparser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/http.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/dispatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/dispatcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/http_proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/http_proxy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/lint.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/lint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/profiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/proxy_fix.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/proxy_fix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/shared_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/middleware/shared_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/posixemulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/posixemulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/routing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/serving.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/serving.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/testapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/testapp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/useragents.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/useragents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/accept.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/accept.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/base_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/base_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/base_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/base_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/common_descriptors.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/common_descriptors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/cors.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/cors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/etag.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/etag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/user_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wrappers/user_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/site-packages/werkzeug/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qlearning/venv/Lib/tcl8.6/init.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/venv/Lib/tcl8.6/init.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +28,17 @@
           <entry key="Python" value="479" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Procfile" value="2" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -200,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qlearning/qlearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="141" column="31" lean-forward="true" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
+            <state relative-caret-position="2570">
+              <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#4549#4730#0" />
@@ -223,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-30" />
     <option name="width" value="1860" />
     <option name="height" value="1040" />
@@ -309,11 +155,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
@@ -321,7 +166,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2212766" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2212766" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -335,10 +180,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/qlearning/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qlearning/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/qlearning/qlearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="141" column="31" lean-forward="true" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="31" />
+        <state relative-caret-position="2570">
+          <caret line="129" column="25" lean-forward="true" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#4549#4730#0" />
