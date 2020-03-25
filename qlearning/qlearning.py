@@ -25,8 +25,7 @@ def qZeros():
     state = 0
     newEpoch = 0
     done = False
-    epsilon = 0.90
-
+    epsilon = 0.85
 
     learningData = [steps, epoch, pos, state, newEpoch, done, epsilon]
 
@@ -41,7 +40,7 @@ def train():
     env = Env()
     # hyperparameters
     epochs = 9
-    decay = 0
+    decay = 0.1
 
     #learningData = [steps, epoch, pos, state, newEpoch, done]
     email = request.args.get('email')
@@ -83,6 +82,7 @@ def train():
                 a = c
 
             learningData[6] -= decay * learningData[6]
+            print(learningData[6])
 
             db.students.find_one_and_update(
                 {"email": email},
