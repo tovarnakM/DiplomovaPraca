@@ -12,16 +12,6 @@ CORS(app)
 client = MongoClient('mongodb://username:user123@ds011231.mlab.com:11231/heroku_kkr81g5x?retryWrites=false')
 db = client.heroku_kkr81g5x
 
-class Parameter():
-    # steps = 0
-    # epoch = 0
-    # pos = 0
-    # state = 0
-    epsilon = 0.7
-    # newEpoch = 0
-    # done = False
-
-
 @app.route('/', methods=['GET'])
 def start():
     return 'Hello world'
@@ -35,9 +25,10 @@ def qZeros():
     state = 0
     newEpoch = 0
     done = False
+    epsilon = 0.90
 
 
-    learningData = [steps, epoch, pos, state, newEpoch, done]
+    learningData = [steps, epoch, pos, state, newEpoch, done, epsilon]
 
     email = request.args.get('email')
     response = initializeTable(email, learningData)
@@ -79,12 +70,10 @@ def train():
 
             # act randomly sometimes to allow exploration
             generateNumber = np.random.uniform()
-            if generateNumber < Parameter.epsilon:
+            if generateNumber < learningData[6]:
                 action = env.randomAction()
-                print("mensie........", generateNumber, "   ", Parameter.epsilon)
 
             else:
-                print("vacsie........", generateNumber, "   ", Parameter.epsilon)
                 action = qtable[learningData[3]].index(max(qtable[learningData[3]]))
             # if not select max action in Qtable (act greedy)
 
@@ -93,7 +82,7 @@ def train():
                 c = a * b
                 a = c
 
-            Parameter.epsilon -= decay * Parameter.epsilon
+            learningData[6] -= decay * learningData[6]
 
             db.students.find_one_and_update(
                 {"email": email},
