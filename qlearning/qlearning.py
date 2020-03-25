@@ -33,7 +33,7 @@ def qZeros():
     epoch = 0
     pos = 0
     state = 0
-    epsilon = 0.7
+    epsilon = 0.3
     newEpoch = 0
     done = False
 
