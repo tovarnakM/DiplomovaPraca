@@ -17,7 +17,7 @@ class Parameter():
     # epoch = 0
     # pos = 0
     # state = 0
-    epsilon = 0.3
+    epsilon = 0.7
     # newEpoch = 0
     # done = False
 
@@ -35,8 +35,6 @@ def qZeros():
     state = 0
     newEpoch = 0
     done = False
-
-    Parameter.epsilon = 0.7
 
     learningData = [steps, epoch, pos, state, newEpoch, done]
 
@@ -99,7 +97,7 @@ def train():
                  }, upsert=True
             )
 
-            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0], "data": learningData})
+            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0], "data": learningData, "qtable": qtable})
     return jsonify({"res": "success"})
 
 
@@ -197,10 +195,12 @@ class Env():
         if action == 0:
             c = a + b;
 
-            if str(c) == str(userResponse):
+            if int(c) == int(userResponse):
+                print("operation + is ok")
                 reward = -0.5;
                 learningData[2] += 1;
             else:
+                print("operation + no okej")
                 reward = 1;
                 learningData[2] += 1;
 
@@ -208,10 +208,12 @@ class Env():
 
             c = a - b
 
-            if str(c) == str(userResponse):
+            if int(c) == int(userResponse):
+                print("operation - is ok")
                 reward = -0.5;
                 learningData[2] += 1;
             else:
+                print("operation - is not ok")
                 reward = 1;
                 learningData[2] += 1;
 
@@ -219,10 +221,12 @@ class Env():
 
             c = a * b;
 
-            if str(c) == str(userResponse):
+            if int(c) == int(userResponse):
+                print("operation * is ok")
                 reward = -0.5;
                 learningData[2] += 1;
             else:
+                print("operation * is not ok")
                 reward = 1;
                 learningData[2] += 1;
 
@@ -230,10 +234,12 @@ class Env():
 
             c = a / b;
 
-            if str(c) == str(userResponse):
+            if int(c) == int(userResponse):
+                print("operation / is ok")
                 reward = -0.5;
                 learningData[2] += 1;
             else:
+                print("operation / is not ok")
                 reward = 1;
                 learningData[2] += 1;
 
