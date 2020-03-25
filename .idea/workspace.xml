@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0f57052-5f6b-488e-95d6-dc4c8feee942" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/qlearning/qlearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/qlearning/qlearning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DiplomovaPraca.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qlearning/qlearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="178" column="34" lean-forward="true" selection-start-line="178" selection-start-column="34" selection-end-line="178" selection-end-column="34" />
+            <state relative-caret-position="2046">
+              <caret line="178" column="34" selection-start-line="178" selection-start-column="34" selection-end-line="178" selection-end-column="34" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#3284#4261#0" />
@@ -90,11 +94,6 @@
             <path>
               <item name="DiplomovaPraca" type="b2602c69:ProjectViewProjectNode" />
               <item name="DiplomovaPraca" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DiplomovaPraca" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DiplomovaPraca" type="462c0819:PsiDirectoryNode" />
-              <item name="qlearning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -160,14 +159,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21083939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35177305" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35177305" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -197,8 +195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qlearning/qlearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="178" column="34" lean-forward="true" selection-start-line="178" selection-start-column="34" selection-end-line="178" selection-end-column="34" />
+        <state relative-caret-position="2046">
+          <caret line="178" column="34" selection-start-line="178" selection-start-column="34" selection-end-line="178" selection-end-column="34" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#3284#4261#0" />
