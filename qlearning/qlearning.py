@@ -36,6 +36,7 @@ def qZeros():
     newEpoch = 0
     done = False
 
+
     learningData = [steps, epoch, pos, state, newEpoch, done]
 
     email = request.args.get('email')
@@ -49,7 +50,7 @@ def train():
     env = Env()
     # hyperparameters
     epochs = 9
-    decay = 0.1
+    decay = 0
 
     #learningData = [steps, epoch, pos, state, newEpoch, done]
     email = request.args.get('email')
