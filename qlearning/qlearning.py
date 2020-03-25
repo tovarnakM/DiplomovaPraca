@@ -24,7 +24,7 @@ class Parameter():
 
 @app.route('/', methods=['GET'])
 def start():
-    return "hello it is working"
+    return 'Hello world'
 
 
 @app.route('/getZeros', methods=['GET'])
@@ -35,11 +35,13 @@ def qZeros():
     state = 0
     newEpoch = 0
     done = False
+    Parameter.epsilon = 0.7
 
-    learningData = [steps, epoch, pos, state, done, newEpoch]
+    learningData = [steps, epoch, pos, state, newEpoch, done]
 
     email = request.args.get('email')
     response = initializeTable(email, learningData)
+
     return jsonify({"res": response})
 
 
@@ -53,22 +55,21 @@ def train():
     email = request.args.get('email')
     user = db.students.find_one({'email': email})
     learningData = user.get('learningData')
-
-    #learningData = [steps, epoch, pos, state, done, newEpoch]
+    #learningData = [steps, epoch, pos, state, newEpoch, done]
 
     if learningData[1] <= epochs:
         if learningData[1] == 0 and learningData[0] == 0:
-            learningData[3], reward, learningData[4] = env.reset(email)
+            learningData[3], reward, learningData[5] = env.reset(email)
             learningData[0] = 0
 
         # training loop
-        if learningData[1] <= epochs and learningData[1] != learningData[5]:
-            learningData[5] = learningData[1]
-            learningData[3], reward, learningData[4] = env.reset(email)
+        if learningData[1] <= epochs and learningData[1] != learningData[4]:
+            learningData[4] = learningData[1]
+            learningData[3], reward, learningData[5] = env.reset(email)
             learningData[0] = 0
             print("\n")
 
-        if not learningData[4]:
+        if not learningData[5]:
             # count steps to finish game
             learningData[0] += 1
 
@@ -107,20 +108,16 @@ def evaluate():
     env = Env()
     gamma = 0.8
 
-    # learningData = [steps, epoch, pos, state, done, newEpoch]
-
     req_data = request.get_json()
-
     email = req_data['email']
+
     user = db.students.find_one({'email': email})
     learningData = user.get('learningData')
+    # learningData = [steps, epoch, pos, state, newEpoch, done]
 
-    next_state, reward, learningData[4], c = env.step(req_data['action'], req_data['a'], req_data['b'],
+
+    next_state, reward, learningData[5], c = env.step(req_data['action'], req_data['a'], req_data['b'],
                                                      req_data['userResponse'], email)
-
-    email = req_data['email']
-    user = db.students.find_one({'email': email})
-    learningData = user.get('learningData')
 
     qtable = loadQtable(email)
 
@@ -139,7 +136,7 @@ def evaluate():
 
     if learningData[0] == 7:
         learningData[1] += 1
-        learningData[4] = True;
+        learningData[5] = True;
 
     db.students.find_one_and_update(
         {"email": email},
@@ -194,17 +191,14 @@ class Env():
     def reset(self, email):
         user = db.students.find_one({'email': email})
         learningData = user.get('learningData')
-
         learningData[2] = 0;
-        learningData[4] = False;
+        learningData[5] = False;
 
         db.students.find_one_and_update(
             {"email": email},
             {"$set":
-                {
-                    'learningData': learningData
-                }
-            }, upsert=True
+                 {'learningData': learningData}
+             }, upsert=True
         )
 
         return 0, 0, False;
@@ -223,10 +217,10 @@ class Env():
 
     def step(self, action, a, b, userResponse, email):
 
-        # learningData = [steps, epoch, pos, state, done, newEpoch]
-
         user = db.students.find_one({'email': email})
         learningData = user.get('learningData')
+
+        # learningData = [steps, epoch, pos, state, newEpoch, done]
 
         if action == 0:
             c = a + b;
@@ -271,7 +265,7 @@ class Env():
                 reward = 1;
                 learningData[2] += 1;
 
-        learningData[4] = learningData[2] == 7;
+        learningData[5] = learningData[2] == 7;
         nextState = learningData[2];
 
         db.students.find_one_and_update(
@@ -281,14 +275,13 @@ class Env():
              }, upsert=True
         )
 
-        return nextState, reward, learningData[4], c;
+        return nextState, reward, learningData[5], c;
 
     def randomAction(self):
         return np.random.choice(self.actions);
 
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
 
