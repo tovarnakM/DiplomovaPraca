@@ -33,8 +33,10 @@ def qZeros():
     epoch = 0
     pos = 0
     state = 0
+    epsilon = 0.7
     newEpoch = 0
     done = False
+
     Parameter.epsilon = 0.7
 
     learningData = [steps, epoch, pos, state, newEpoch, done]
@@ -52,22 +54,21 @@ def train():
     epochs = 9
     decay = 0.1
 
+    #learningData = [steps, epoch, pos, state, newEpoch, done]
     email = request.args.get('email')
     user = db.students.find_one({'email': email})
     learningData = user.get('learningData')
-    #learningData = [steps, epoch, pos, state, newEpoch, done]
 
     if learningData[1] <= epochs:
         if learningData[1] == 0 and learningData[0] == 0:
-            learningData[3], reward, learningData[5] = env.reset(email)
+            learningData[3], reward, learningData[5] = env.reset(learningData)
             learningData[0] = 0
 
         # training loop
         if learningData[1] <= epochs and learningData[1] != learningData[4]:
             learningData[4] = learningData[1]
-            learningData[3], reward, learningData[5] = env.reset(email)
+            learningData[3], reward, learningData[5] = env.reset(learningData)
             learningData[0] = 0
-            print("\n")
 
         if not learningData[5]:
             # count steps to finish game
@@ -99,7 +100,7 @@ def train():
                  }, upsert=True
             )
 
-            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0]})
+            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0], "data": learningData})
     return jsonify({"res": "success"})
 
 
@@ -110,25 +111,15 @@ def evaluate():
 
     req_data = request.get_json()
     email = req_data['email']
-
     user = db.students.find_one({'email': email})
     learningData = user.get('learningData')
-    # learningData = [steps, epoch, pos, state, newEpoch, done]
-
 
     next_state, reward, learningData[5], c = env.step(req_data['action'], req_data['a'], req_data['b'],
-                                                     req_data['userResponse'], email)
+                                                     req_data['userResponse'], learningData)
 
     qtable = loadQtable(email)
 
     qtable[learningData[3]][req_data['action']] = reward + gamma * max(qtable[learningData[3]])
-
-    db.students.find_one_and_update(
-        {"email": email},
-        {"$set":
-             {'qTable': qtable}
-         }, upsert=True
-    )
 
     # update state
     learningData[3] = next_state
@@ -141,7 +132,7 @@ def evaluate():
     db.students.find_one_and_update(
         {"email": email},
         {"$set":
-             {'learningData': learningData}
+             {'qTable': qtable, 'learningData': learningData}
          }, upsert=True
     )
 
@@ -172,10 +163,7 @@ def initializeTable(email, learningData):
         db.students.find_one_and_update(
             {"email": email},
             {"$set":
-                 {
-                    'qTable': loadQtable(email),
-                    'learningData': learningData
-                  }
+                 {'qTable': loadQtable(email), 'learningData': learningData}
              }, upsert=True
         )
         return "Learning with existing user!"
@@ -188,19 +176,9 @@ class Env():
         self.stateCount = 7;
         self.actionCount = 4;
 
-    def reset(self, email):
-        user = db.students.find_one({'email': email})
-        learningData = user.get('learningData')
+    def reset(self, learningData):
         learningData[2] = 0;
         learningData[5] = False;
-
-        db.students.find_one_and_update(
-            {"email": email},
-            {"$set":
-                 {'learningData': learningData}
-             }, upsert=True
-        )
-
         return 0, 0, False;
 
     def getNumbersForExample(self):
@@ -215,12 +193,7 @@ class Env():
 
         return a, b
 
-    def step(self, action, a, b, userResponse, email):
-
-        user = db.students.find_one({'email': email})
-        learningData = user.get('learningData')
-
-        # learningData = [steps, epoch, pos, state, newEpoch, done]
+    def step(self, action, a, b, userResponse, learningData):
 
         if action == 0:
             c = a + b;
@@ -267,14 +240,6 @@ class Env():
 
         learningData[5] = learningData[2] == 7;
         nextState = learningData[2];
-
-        db.students.find_one_and_update(
-            {"email": email},
-            {"$set":
-                 {'learningData': learningData}
-             }, upsert=True
-        )
-
         return nextState, reward, learningData[5], c;
 
     def randomAction(self):
