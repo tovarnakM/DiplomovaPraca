@@ -77,9 +77,13 @@ def train():
                 return "User Not found"
 
             # act randomly sometimes to allow exploration
-            if np.random.uniform() < Parameter.epsilon:
+            generateNumber = np.random.uniform()
+            if generateNumber < Parameter.epsilon:
                 action = env.randomAction()
+                print("mensie........", generateNumber, "   ", Parameter.epsilon)
+
             else:
+                print("vacsie........", generateNumber, "   ", Parameter.epsilon)
                 action = qtable[learningData[3]].index(max(qtable[learningData[3]]))
             # if not select max action in Qtable (act greedy)
 
@@ -97,7 +101,7 @@ def train():
                  }, upsert=True
             )
 
-            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0], "data": learningData, "qtable": qtable})
+            return jsonify({"res": "ok", "action": int(action), "a": int(a), "b": int(b), "epoch": learningData[1] + 1, "step": learningData[0]})
     return jsonify({"res": "success"})
 
 
